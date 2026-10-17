@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6c63ff">
+<title>Review 1 – Lessons 1 to 4</title>
+<style>
+:root{--ink:#25304a;--purple:#6c63ff;--blue:#5bc0eb;--teal:#4ecdc4;--yellow:#ffd166;--pink:#ff8fab;--green:#27ae60;--red:#e76f51;--paper:#fff;--muted:#65718a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Nunito,"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:linear-gradient(135deg,#e8f7ff 0%,#f5efff 48%,#fff4e4 100%);font-size:18px}
+button,input{font:inherit}
+button{border:0;cursor:pointer;touch-action:manipulation}
+button:focus-visible,input:focus-visible{outline:3px solid #ffad33;outline-offset:3px}
+
+.site-brand{width:min(900px,100%);margin:0 auto 18px;padding:15px 18px 12px;background:linear-gradient(135deg,rgba(255,255,255,.97),rgba(255,244,249,.96));border:1px solid rgba(255,255,255,.98);border-radius:24px;box-shadow:0 12px 30px rgba(76,76,150,.12);display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden}
+.site-brand:before{content:"";position:absolute;left:-35px;top:-50px;width:120px;height:120px;border:2px solid #f4a3bd;border-radius:50%;opacity:.35}
+.site-brand:after{content:"";position:absolute;right:-25px;bottom:-65px;width:145px;height:145px;border:2px solid #8abcf2;border-radius:50%;opacity:.35}
+.brand-lockup{position:relative;z-index:1;text-align:center;line-height:1.1}
+.brand-wordmark{display:flex;align-items:baseline;justify-content:center;gap:8px;flex-wrap:wrap}
+.brand-easy{font-size:clamp(27px,5vw,43px);font-weight:1000;font-style:italic;letter-spacing:-1.6px;color:#123968;text-shadow:0 2px 0 #dceafa}
+.brand-ict{font-size:clamp(31px,5.4vw,47px);font-weight:1000;font-style:italic;letter-spacing:-1px;color:#d52c68}
+.brand-heart{font-size:clamp(34px,5vw,46px);font-weight:900;color:#df5b86;line-height:.8;margin-left:2px}
+.brand-byline{display:inline-block;margin-top:5px;padding:7px 22px;border-radius:999px;background:linear-gradient(90deg,#ed6b98,#d93e78);color:#fff;font-size:clamp(14px,2.8vw,19px);font-weight:850;box-shadow:0 4px 10px #d93e7822}
+.brand-motto{margin-top:7px;color:#173e6e;font-size:clamp(14px,2.7vw,18px);font-style:italic;font-weight:800;letter-spacing:.2px}
+.brand-motto span{color:#e54c82;padding:0 5px}
+.subject-ribbon{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:10px;max-width:100%;padding:10px 18px;border-radius:16px;background:linear-gradient(110deg,#eaf7ff,#f5efff 55%,#fff0f5);border:1px solid #dfe6ff;color:#173b70;text-align:left}
+.subject-icon{font-size:25px}.subject-ribbon strong{display:block;font-size:clamp(14px,2.6vw,18px);line-height:1.3}.subject-ribbon small{display:block;font-size:13px;color:#5f6684;margin-top:3px}.ribbon-star{font-size:22px;color:#e64e83;margin-left:4px}
+.app{width:min(900px,100%);margin:auto;padding:0 16px 36px}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;color:#4d5680;font-weight:800;font-size:14px}
+.brand{display:flex;align-items:center;gap:8px}.brand-icon{font-size:25px}
+.screen{display:none}.screen.active{display:block;animation:pop .3s ease}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card{background:rgba(255,255,255,.96);border:2px solid rgba(255,255,255,.9);border-radius:28px;padding:clamp(20px,5vw,42px);box-shadow:0 16px 42px rgba(76,76,150,.12)}
+.hero{text-align:center;overflow:hidden;position:relative}
+.emoji-hero{font-size:clamp(52px,10vw,82px);line-height:1.3}
+h1{font-size:clamp(29px,6vw,42px);margin:8px 0;color:#5548d9;line-height:1.15}
+h2{font-size:clamp(24px,5vw,32px);line-height:1.25;margin:0 0 18px}
+.subtitle{color:var(--muted);font-size:clamp(17px,3vw,21px);margin:10px 0 26px}
+.field{text-align:left;margin:18px auto;max-width:480px}
+label{display:block;font-weight:800;margin-bottom:8px}
+input{width:100%;padding:15px 16px;border:2px solid #dce1f2;border-radius:15px;background:#fff;color:var(--ink);min-height:54px}
+input:focus{border-color:var(--purple)}
+.btn{padding:14px 22px;border-radius:16px;font-weight:900;min-height:52px;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.03);transform:translateY(-1px)}
+.primary{background:linear-gradient(135deg,var(--purple),#8c72ff);color:white;box-shadow:0 8px 18px #6c63ff30}
+.secondary{background:#edf0ff;color:#5548d9}
+.full{width:100%;max-width:480px}
+.error{color:#b73535;font-weight:800;min-height:24px;margin:8px 0}
+.quiz-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.pill{border-radius:999px;padding:9px 13px;background:white;color:#5148bb;font-size:15px;font-weight:900;box-shadow:0 4px 12px #5252a012}
+.progress{height:12px;border-radius:999px;background:#e4e8f7;overflow:hidden;margin:14px 0 22px}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#4ecdc4,#6c63ff);transition:width .3s}
+.question-number{color:#7165db;font-weight:900;font-size:16px;margin-bottom:12px}
+.question-text{font-size:clamp(21px,4.5vw,29px);line-height:1.45;font-weight:900;margin:0 0 22px;overflow-wrap:anywhere}
+.options{display:grid;gap:12px}
+.option{display:flex;align-items:center;gap:12px;text-align:left;width:100%;padding:15px 16px;border:2px solid #e3e7f5;border-radius:17px;background:#fff;color:var(--ink);font-size:clamp(18px,3.7vw,21px);font-weight:750;line-height:1.35;min-height:60px}
+.option-letter{display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:11px;background:#f0edff;color:#5d50d9;font-weight:900}
+.option.selected{border-color:var(--purple);background:#f4f2ff}
+.option.correct{border-color:#34b56a;background:#edfff4}
+.option.wrong{border-color:#f08b76;background:#fff2ef}
+.option:disabled{cursor:default}
+.feedback{display:none;margin-top:18px;border-radius:18px;padding:16px;font-weight:850;line-height:1.45}
+.feedback.show{display:flex;gap:12px;align-items:center;animation:pop .25s ease}
+.feedback.good{background:#eafff1;color:#176c3a;border:2px solid #b8f0ca}
+.feedback.bad{background:#fff1ed;color:#963d2c;border:2px solid #ffd0c5}
+.face{font-size:36px;flex:0 0 auto}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.actions .btn{flex:1}
+.hidden{display:none!important}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}
+.stat{background:#f5f4ff;border-radius:17px;padding:16px;text-align:center}
+.stat strong{display:block;font-size:clamp(23px,5vw,30px);color:#594ed2;margin-top:5px}
+.stat span{font-size:15px;color:#626d87;font-weight:800}
+.result-emoji{font-size:72px;text-align:center}
+.result-message{text-align:center;color:#574bcf;font-size:clamp(20px,4vw,25px);font-weight:900;margin:12px 0}
+.student-details{line-height:1.8;text-align:center;color:#59647e;overflow-wrap:anywhere}
+.review-list{display:grid;gap:14px;margin-top:20px}
+.review-item{border:2px solid #e6e9f6;border-radius:18px;padding:16px;background:#fff}
+.review-item p{font-weight:900;line-height:1.45;margin:0 0 10px}
+.review-item .answerline{color:#1c8a4a;font-weight:800}
+.review-item .wrongline{color:#b64b37;font-weight:800}
+.tiny{font-size:14px;color:var(--muted);text-align:center;margin-top:20px}
+@media(max-width:520px){.app{padding:0 10px 24px}.site-brand{margin-bottom:12px;padding:12px 8px 9px;border-radius:17px;gap:9px}.brand-wordmark{gap:5px}.brand-easy{letter-spacing:-1px}.subject-ribbon{padding:8px 10px;gap:7px}.subject-ribbon small{font-size:11px}.subject-icon{font-size:21px}.ribbon-star{font-size:18px}.card{border-radius:22px;padding:20px 16px}.actions{flex-direction:column}.actions .btn{width:100%}.option{padding:13px 12px}.stats{gap:8px}.stat{padding:12px 8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="site-brand" aria-label="Easy Learning ICT branding">
+    <div class="brand-lockup">
+      <div class="brand-wordmark">
+        <span class="brand-easy">Easy Learning</span><span class="brand-ict">ICT</span><span class="brand-heart" aria-hidden="true">♡</span>
+      </div>
+      <div class="brand-byline">by MRS. Amina Galal</div>
+      <div class="brand-motto">Learn <span>♥</span> Create <span>♥</span> Grow</div>
+    </div>
+    <div class="subject-ribbon"><span class="subject-icon" aria-hidden="true">💻</span><span><strong>Information and Communication Technology (ICT)</strong><small>Prep 1&nbsp; • &nbsp;Review 1 – Lessons 1 to 4</small></span><span class="ribbon-star" aria-hidden="true">✦</span></div>
+  </header>
+
+  <section id="startScreen" class="screen active card hero">
+    <div class="emoji-hero" aria-hidden="true">💻 ✨ 📚</div>
+    <h1>Welcome to Review 1!</h1>
+    <p class="subtitle">Lessons 1–4 | Let's Learn and Have Fun!</p>
+    <div class="field"><label for="studentName">Student Name</label><input id="studentName" autocomplete="name" maxlength="80" placeholder="Enter your name"></div>
+    <div class="field"><label for="studentClass">Class</label><input id="studentClass" maxlength="40" placeholder="Enter your class"></div>
+    <p id="startError" class="error" role="alert"></p>
+    <button id="startBtn" class="btn primary full">Start Quiz 🚀</button>
+    <p class="tiny">40 questions • 2 points for each correct answer</p>
+  </section>
+
+  <section id="quizScreen" class="screen">
+    <div class="quiz-head"><span id="progressLabel" class="pill">Question 1 of 40</span><span id="timer" class="pill" aria-live="off">⏱ 00:00</span><span id="scorePill" class="pill">⭐ Score: 0</span></div>
+    <div class="progress" aria-label="Quiz progress"><div id="progressFill" class="progress-fill"></div></div>
+    <div class="card">
+      <div id="questionNumber" class="question-number">QUESTION 1</div>
+      <h2 id="questionText" class="question-text"></h2>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+      <div class="actions"><button id="reviewBtn" class="btn primary">Review Answer ✓</button><button id="nextBtn" class="btn secondary hidden">Next Question ➜</button></div>
+    </div>
+    <p class="tiny">Take your time and do your best!</p>
+  </section>
+
+  <section id="resultScreen" class="screen card">
+    <div id="resultEmoji" class="result-emoji" aria-hidden="true">🎉</div>
+    <h1 style="text-align:center">Quiz Completed!</h1>
+    <p id="resultMessage" class="result-message">Great job!</p>
+    <p id="studentDetails" class="student-details"></p>
+    <div class="stats">
+      <div class="stat"><span>Final Score</span><strong id="finalScore">0 / 80</strong></div>
+      <div class="stat"><span>Completion Time</span><strong id="finalTime">00:00</strong></div>
+      <div class="stat"><span>Correct Answers</span><strong id="correctCount">0</strong></div>
+      <div class="stat"><span>Incorrect Answers</span><strong id="incorrectCount">0</strong></div>
+      <div class="stat" style="grid-column:1/-1"><span>Unanswered Questions</span><strong id="unansweredCount">0</strong></div>
+    </div>
+    <div class="actions"><button id="reviewAllBtn" class="btn secondary">Review My Answers</button><button id="tryAgainBtn" class="btn primary">Start a New Attempt 🔄</button><button id="backStartBtn" class="btn secondary">Back to Start</button><button id="exitBtn" class="btn secondary">Exit Quiz</button></div>
+    <div id="reviewList" class="review-list hidden"></div>
+    <p class="tiny">Your final score and completion time are shown above. They will remain visible until you choose to start a new attempt or return to the start screen. Keep learning, keep growing, and keep shining! 🌟</p>
+  </section>
+</div>
+<script>
+const questions = [{"type": "mcq", "text": "Green technology is also known as ...... technology", "options": ["clean", "sustainable", "harmful", "both a and b"], "answer": 3}, {"type": "mcq", "text": "One of the fields of using green technology is …………….", "options": ["fossil fuels", "renewable energy", "chemical production", "mining"], "answer": 1}, {"type": "mcq", "text": "Green buildings use …………. to reduce energy consumption.", "options": ["harmful materials", "nuclear energy", "eco-friendly materials", "gas heaters"], "answer": 2}, {"type": "mcq", "text": "One benefit of green technology is ……………", "options": ["resources conservation", "reducing carbon emissions", "increasing fuel consumption", "both a and b"], "answer": 3}, {"type": "mcq", "text": "Digital transformation involves combination. ..................... all aspects of business.", "options": ["digital technology", "paper documents", "raw materials", "traditional methods"], "answer": 0}, {"type": "mcq", "text": "The \"Digital Egypt\" platform is …………………", "options": ["a social media app", "an e-government service", "a video game", "a fitness tracker"], "answer": 1}, {"type": "mcq", "text": "Electronic payment applications can be used within the app …………….", "options": ["INSTAPAY", "Google Meet", "WhatsApp", "Email"], "answer": 0}, {"type": "mcq", "text": "The main purpose of \"Digital Egypt\" platform is to ………………", "options": ["delivers improved services to citizens", "enhance government procedure efficiency", "provides e-learning resources", "both a and b"], "answer": 3}, {"type": "mcq", "text": "Electronic payment cards provide............ electronic payment methods.", "options": ["easy", "secure", "fast", "all of them"], "answer": 3}, {"type": "mcq", "text": "Collaboration tools like Zoom and Google Meet are used for ………", "options": ["document printing", "face-to-face communication"], "answer": 1}, {"type": "mcq", "text": "........................is an interface between the user, hardware and software.", "options": ["Computer accessories", "Operating System", "CPU", "Smart devices."], "answer": 1}, {"type": "mcq", "text": "Operating systems are necessary for managing ……………", "options": ["Smart devices only", "Televisions only", "Non-digital devices", "All electronic devices"], "answer": 3}, {"type": "mcq", "text": "Smartphones typically run on ……………..", "options": ["Windows Server", "macOS", "iOS and Android", "Linux and Unix"], "answer": 2}, {"type": "mcq", "text": "………….. devices are network equipment that requires an operating system to operate.", "options": ["Television", "Printing", "Smart watches", "Routers"], "answer": 3}, {"type": "mcq", "text": "........ is an electronic device through which the customer can pay for the products he has purchased.", "options": ["POS Terminal", "ATM", "Industrial control system", "Smart watch"], "answer": 0}, {"type": "mcq", "text": "To install a program from a CD, you should first ……………..", "options": ["click on \"Uninstall\"", "insert the CD", "download it online", "open Control Panel"], "answer": 1}, {"type": "mcq", "text": "When you download software from the internet, the software is in the form of a/................. which is used to install the software.", "options": ["digital fingerprint", "image", "file", "worksheet"], "answer": 2}, {"type": "mcq", "text": "Uninstalling a program can be done through the ……………", "options": ["Task Manager", "Control Panel", "File Explorer", "Recycle Bin"], "answer": 1}, {"type": "mcq", "text": "Removing unused programs leads to ……………", "options": ["slowing down the computer", "saving storage space"], "answer": 1}, {"type": "mcq", "text": "Removing a program means that you are …………..", "options": ["copying all the program files to the computer.", "deleting all the program files from the computer.", "pasting all the program files to the computer.", "saving all the program files from the computer"], "answer": 1}, {"type": "mcq", "text": "In the printer installation process, selecting the correct ………… is necessary.", "options": ["paper size", "port", "font", "color"], "answer": 1}, {"type": "mcq", "text": "If the desired printer driver isn't listed, you should click …………..", "options": ["\"Install Now\"", "\"Have Disk\"", "\"Finish\"", "\"Run Setup\""], "answer": 1}, {"type": "tf", "text": "Egypt is not interested in using electric vehicles as an alternative to fuel cars.", "answer": 1}, {"type": "tf", "text": "Electric cars operate using batteries and recharge at power stations.", "answer": 0}, {"type": "tf", "text": "Water treatment in green technology does not include purifying contaminated water for reuse.", "answer": 1}, {"type": "tf", "text": "The use of body sensors in green technology helps conserve water.", "answer": 0}, {"type": "tf", "text": "Digital transformation tools do not include electronic payment methods.", "answer": 1}, {"type": "tf", "text": "INSTAPAY is an app for electronic payments licensed by the Central Bank of Egypt.", "answer": 0}, {"type": "tf", "text": "Cybersecurity solutions are from the tools used for digital transformation.", "answer": 0}, {"type": "tf", "text": "Reducing the utilization of natural resources is a common goal of both green technology and digital transformation.", "answer": 0}, {"type": "tf", "text": "An operating system manages hardware and software components.", "answer": 0}, {"type": "tf", "text": "Operating systems are not necessary for operating and managing a variety of modern electronic devices.", "answer": 1}, {"type": "tf", "text": "Utilizing wearable devices like smartwatches and fitness trackers does not necessitate an operating system.", "answer": 1}, {"type": "tf", "text": "ATMs do not require an operating system for their operations.", "answer": 1}, {"type": "tf", "text": "The startup screen varies for the operating system according to the version of the operating system.", "answer": 0}, {"type": "tf", "text": "The desktop of an operating system includes icons arranged in a specific order.", "answer": 0}, {"type": "tf", "text": "The installation process depends on the form in which the program comes.", "answer": 0}, {"type": "tf", "text": "If you downloaded the program from the Internet, it comes as a file used for installation.", "answer": 0}, {"type": "tf", "text": "Uninstalling a program removes all its files from your computer.", "answer": 0}, {"type": "tf", "text": "Many programs come with their own removal or uninstall command.", "answer": 0}];
+const $ = id => document.getElementById(id);
+let current = 0, studentName = "", studentClass = "", startedAt = 0, elapsedSeconds = 0, timerHandle = null, answers = [], reviewed = [];
+const letters = ["A","B","C","D"];
+const praiseGood = ["Excellent! You got it right! 🎉","Amazing Work! Keep Going! ⭐","Fantastic! You're doing great!","Brilliant Answer! Well Done!","You're a Star! Keep Shining! 🌟"];
+const praiseBad = ["Not quite! Keep trying! 💪","Good effort! You can do it!","Don't give up! Keep learning!","Every mistake helps you learn!"];
+function showScreen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));$(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});}
+function formatTime(seconds){const m=Math.floor(seconds/60),s=seconds%60;return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");}
+function updateTimer(){elapsedSeconds=Math.floor((Date.now()-startedAt)/1000);$("timer").textContent="⏱ "+formatTime(elapsedSeconds);}
+function beginQuiz(){
+ const name=$("studentName").value.trim(), cls=$("studentClass").value.trim();
+ if(!name||!cls){$("startError").textContent="Please enter your name and class before starting.";return;}
+ studentName=name;studentClass=cls;current=0;answers=Array(questions.length).fill(null);reviewed=Array(questions.length).fill(false);elapsedSeconds=0;startedAt=Date.now();
+ clearInterval(timerHandle);timerHandle=setInterval(updateTimer,1000);$("startError").textContent="";showScreen("quizScreen");renderQuestion();
+}
+function renderQuestion(){
+ const q=questions[current];$("progressLabel").textContent=`Question ${current+1} of ${questions.length}`;$("questionNumber").textContent=`QUESTION ${current+1}`;$("questionText").textContent=q.text;
+ $("progressFill").style.width=((current+1)/questions.length*100)+"%";$("scorePill").textContent="⭐ Score: "+getScore();
+ const box=$("options");box.innerHTML="";
+ const choices=q.type==="tf"?["True","False"]:q.options;
+ choices.forEach((choice,i)=>{const b=document.createElement("button");b.type="button";b.className="option";b.dataset.index=i;
+ const badge=document.createElement("span");badge.className="option-letter";badge.textContent=q.type==="tf"?(i===0?"✓":"✕"):letters[i];
+ const text=document.createElement("span");text.textContent=choice;b.append(badge,text);
+ if(answers[current]===i)b.classList.add("selected");
+ if(reviewed[current]){b.disabled=true;if(i===q.answer)b.classList.add("correct");else if(i===answers[current])b.classList.add("wrong");}
+ b.addEventListener("click",()=>selectAnswer(i));box.appendChild(b);});
+ const fb=$("feedback");fb.className="feedback";fb.textContent="";fb.innerHTML="";
+ if(reviewed[current])showFeedback(answers[current]===q.answer);
+ $("reviewBtn").classList.toggle("hidden",reviewed[current]);$("nextBtn").classList.toggle("hidden",!reviewed[current]);
+ $("nextBtn").textContent=current===questions.length-1?"See My Results 🎉":"Next Question ➜";
+}
+function selectAnswer(index){if(reviewed[current])return;answers[current]=index;document.querySelectorAll(".option").forEach((b,i)=>b.classList.toggle("selected",i===index));}
+function getScore(){return reviewed.reduce((sum,done,i)=>sum+(done&&answers[i]===questions[i].answer?2:0),0);}
+function showFeedback(correct){
+ const fb=$("feedback");fb.className="feedback show "+(correct?"good":"bad");
+ const face=document.createElement("span");face.className="face";face.textContent=correct?"😄":"🤔";
+ const copy=document.createElement("div");const line=document.createElement("div");line.textContent=correct?` ${praiseGood[current%praiseGood.length]} +2 Points`:` ${praiseBad[current%praiseBad.length]}`;
+ copy.appendChild(line);
+ if(!correct){const answer=document.createElement("div");answer.style.marginTop="6px";answer.textContent="Correct answer: "+(questions[current].type==="tf"?(questions[current].answer===0?"True":"False"):questions[current].options[questions[current].answer]);copy.appendChild(answer);}
+ fb.replaceChildren(face,copy);
+}
+function reviewAnswer(){
+ if(answers[current]===null){const fb=$("feedback");fb.className="feedback show bad";fb.textContent="Please select an answer first!";return;}
+ if(reviewed[current])return;reviewed[current]=true;
+ const correct=answers[current]===questions[current].answer;showFeedback(correct);
+ document.querySelectorAll(".option").forEach((b,i)=>{b.disabled=true;if(i===questions[current].answer)b.classList.add("correct");else if(i===answers[current])b.classList.add("wrong");});
+ $("reviewBtn").classList.add("hidden");$("nextBtn").classList.remove("hidden");$("scorePill").textContent="⭐ Score: "+getScore();
+}
+function nextQuestion(){if(!reviewed[current])return;if(current<questions.length-1){current++;renderQuestion();}else finishQuiz();}
+function finishQuiz(){
+ clearInterval(timerHandle);elapsedSeconds=Math.floor((Date.now()-startedAt)/1000);
+ const correct=questions.reduce((n,q,i)=>n+(reviewed[i]&&answers[i]===q.answer?1:0),0);
+ const incorrect=questions.reduce((n,q,i)=>n+(reviewed[i]&&answers[i]!==q.answer?1:0),0);
+ const unanswered=questions.length-correct-incorrect;const score=correct*2;
+ $("studentDetails").textContent=`Student Name: ${studentName}  •  Class: ${studentClass}`;
+ $("finalScore").textContent=`${score} / ${questions.length*2}`;$("finalTime").textContent=formatTime(elapsedSeconds);$("correctCount").textContent=correct;$("incorrectCount").textContent=incorrect;$("unansweredCount").textContent=unanswered;
+ const ratio=correct/questions.length;$("resultEmoji").textContent=ratio>=.85?"🏆":ratio>=.6?"🎉":"🌱";
+ $("resultMessage").textContent=ratio>=.85?"Outstanding Performance! You're Amazing!":ratio>=.6?"Great Job! Keep Up the Good Work!":"Keep Practicing! You're Getting Stronger Every Day!";
+ $("reviewList").classList.add("hidden");$("reviewList").innerHTML="";$("reviewAllBtn").textContent="Review My Answers";showScreen("resultScreen");
+}
+function buildReview(){
+ const list=$("reviewList");list.innerHTML="";
+ questions.forEach((q,i)=>{const item=document.createElement("div");item.className="review-item";const p=document.createElement("p");p.textContent=`${i+1}. ${q.text}`;item.appendChild(p);
+ const your=document.createElement("div");your.textContent="Your answer: "+(answers[i]===null?"Not answered":q.type==="tf"?(answers[i]===0?"True":"False"):q.options[answers[i]]);your.className=answers[i]!==null&&answers[i]===q.answer?"answerline":"wrongline";item.appendChild(your);
+ const correct=document.createElement("div");correct.className="answerline";correct.textContent="Correct answer: "+(q.type==="tf"?(q.answer?"True":"False"):q.options[q.answer]);item.appendChild(correct);list.appendChild(item);});
+ list.classList.toggle("hidden");$("reviewAllBtn").textContent=list.classList.contains("hidden")?"Review My Answers":"Hide Answer Review";
+ if(!list.classList.contains("hidden"))list.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function resetToStart(clearFields=false){clearInterval(timerHandle);current=0;answers=[];reviewed=[];elapsedSeconds=0;if(clearFields){$("studentName").value="";$("studentClass").value="";}showScreen("startScreen");}
+$("startBtn").addEventListener("click",beginQuiz);$("reviewBtn").addEventListener("click",reviewAnswer);$("nextBtn").addEventListener("click",nextQuestion);$("reviewAllBtn").addEventListener("click",buildReview);
+$("tryAgainBtn").addEventListener("click",()=>{if(confirm("Your final score and completion time have been recorded on this results screen. Start a new attempt?"))resetToStart(false);});
+$("backStartBtn").addEventListener("click",()=>resetToStart(false));
+$("exitBtn").addEventListener("click",()=>{if(confirm("Are you sure you want to exit the quiz?"))resetToStart(true);});
+document.addEventListener("keydown",e=>{if(!$("quizScreen").classList.contains("active"))return;if(e.key==="Enter"&&reviewed[current])nextQuestion();});
+</script>
+</body>
+</html>
